@@ -1,0 +1,184 @@
+body {
+    font-family: 'Times New Roman', Times, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+header,
+footer,
+main {
+    min-height: 100px;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+footer {
+    min-height: 30px;
+    margin: 10px auto;
+}
+
+/* Header styling */
+header {
+    background-color: steelblue;
+    color: white;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 20px;
+    border-bottom: 1px solid black;
+}
+
+header > h1 {
+    margin: 20px 15px;
+}
+
+header #filtering-section {
+    flex-direction: column;
+    padding: 10px;
+}
+
+header #filtering-section #filter-wrapper {
+    justify-content: space-between;
+}
+
+header #filter-btn {
+    min-width: 200px;
+    margin-left: 10px;
+}
+
+/* Filtering buttons underneath header */
+#data-select-section {
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+#data-select-section > h2 {
+    margin: 8px;
+}
+
+/* Button styling */
+#data-select-section #data-buttons {
+    flex-direction: row;
+    justify-content: space-around;
+}
+#data-select-section #data-buttons button {
+    border: 1px solid white;
+    color: white;
+    width: 150px;
+    padding: 5px;
+    margin:  0 10px;
+}
+
+#library-btn {
+    background-color: maroon;
+}
+
+#weather-btn {
+    background-color: darkblue;
+}
+
+#school-btn {
+    background-color: rgb(63, 45, 0);
+}
+
+#restaurant-btn {
+    background-color: green;
+}
+
+/* Table styling */
+main #table-section {
+    width: 80vw;
+    flex-direction: column;
+}
+
+/* Adds scrollbar to table */
+main #table-wrapper {
+    overflow: auto;
+}
+
+main #data-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid black;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Header row that will change with data sets */
+main #data-table th {
+    color:white;
+    padding: 10px 10px;
+}
+
+main #data-table th,
+main #data-table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/* Makes table easier to read */
+main #data-table tr:nth-child(odd) {
+    background-color: #f2f2f2
+}
+
+/* Makes table responsive */
+main #data-table tr:hover {
+    background-color: yellow;
+}
+
+/* Footer styling */
+footer {
+    color: white;
+    background-color: black;
+}
+
+footer > p {
+    padding-left: 20px;
+}
+
+/* Table styling for each data set */
+.library th {
+    background-color: maroon;
+}
+
+.weather th  {
+    background-color: darkblue;
+}
+
+.school th {
+    background-color: rgb(63, 45, 0);
+}
+
+.restaurant th {
+    background-color: green;
+}
+
+
+
+.flex {
+    display: flex;
+}
+
+/* Mobile view */
+@media screen and (max-width: 840px) {
+    /* Search bar comes underneath title */
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Mobile view has stacked buttons */
+    #data-buttons  {
+        display: grid;
+        grid: auto auto / auto auto;
+    }
+
+    /* Bigger buttons */
+    #data-buttons button {
+        min-width: 150px;
+        min-height: 50px;
+    }
+}

@@ -1,0 +1,5 @@
+# JSON Table Display
+This project was created for one of my assignments in Intro Web Development (1170) at Dalhousise University. It was meant as a means to explore ways to manipulate JSON data and practice in responsive web design.
+
+## What the website does
+This webpage diplays tables based on JSON data sets. From the JSON objects, a new table is created with the header row being populated by every key contained within the first object received from this JSON data. For every object received, a row is then created in the table with values populating their corresponding key column for that row.  There is also a search bar that will filter a predetermined field for each data set based on user input. These filters have been chosen based on what is most likely to be of interest to the average user for that data set. Users of the website can also dynamically select from each of the four different data sets. The website is also responsive to being resized, and will change to mobile view at 840px.

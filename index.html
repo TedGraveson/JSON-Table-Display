@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JSON Data Table Builder</title>
+        <meta charset="utf-8">
+        <!-- CSS Reset: Normalize.css 
+			Author: Nicolas Gallagher
+			URL: http://github.com/necolas/normalize.css
+			Date accessed: 28 Nov 2020
+		-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!--Font awesome kit for icons used in personal-details section
+        Provided by free kit license agreement found on: https://fontawesome.com/
+        Accessed: Nov 30, 2020 -->
+        <script src="https://kit.fontawesome.com/7926c1969c.js" crossorigin="anonymous"></script> 
+    </head>
+
+    <body>
+        <header class="flex">
+            <h1>Data Inc: The Coolest Data</h1>
+
+            <!-- Search bar and button for filering.
+                 Can't be form, or else pressing 'enter' refreshes page-->
+            <div id="filtering-section" class="flex">
+                <label for="filter-search-bar">Filter term:</label>
+                <div id="filter-wrapper" class="flex">
+                    <input type="text" id="filter-search-bar" class="flex">
+                    <button type="button" id="filter-btn">Filter by title</button> 
+                </div>
+            </div>
+        </header>
+
+        <!--For user selection of different data sets-->
+        <section id="data-select-section" class="flex">
+            <h2>Show data set for:</h2>
+            <form id="data-buttons" class="flex">
+                    <button type="button" id="library-btn" class="library">Library <i class="fa fa-book" aria-hidden="true"></i></button>
+                    <button type="button" id ="restaurant-btn" class="restaurant">Restaurant <i class="fa fa-cutlery" aria-hidden="true"></i></button>
+                    <button type="button" id="school-btn" class="school">School <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <button type="button" id="weather-btn" class="weather">Weather <i class="fa fa-cloud" aria-hidden="true"></i></button>
+            </form>         
+        </section>
+        
+        <!-- Contains the table that will be filled with JSON data-->
+        <main> 
+            <section id="table-section" class="flex">
+                <h2>Available data:</h2>
+                <div id="table-wrapper">
+                    <!--Will be populated by JS-->
+                    <table id="data-table"></table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="flex">
+            <p>&copy; The coolest data ever!</p>
+        </footer>
+        
+        <!-- JS linking-->
+        <script src="js/data-weather.js"></script>
+        <script src="js/data-school.js"></script>
+        <script src="js/data-restaurant.js"></script>
+        <script src="js/data-library.js"></script>
+        <script src="js/scripts.js"></script>     
+
+    </body>
+</html>
